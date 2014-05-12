@@ -1,0 +1,62 @@
+<section>
+<ol class="breadcrumb">
+	<li><a ng-href="#/archive">Arkiv</a></li>
+	<li><a ng-href="#/archive/{{breadcrumb.category}}">{{breadcrumb.category}}</a></li>
+	<li>{{breadcrumb.name}}</li>
+</ol>
+</section>	
+<section class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-push-6">
+				<div class="item-content">
+					<h1>{{model.name}}</h1>
+					<p>{{model.description}}</p>
+				</div>
+				<div>
+					<h3>Beställ</h3>
+					<p>Beskriv din order nedan (färg, dimensioner, etc.)</p>
+					<div class="form-group">
+						<textarea class="form-control" ng-model="order.description" rows="5"></textarea>
+					</div>
+					<div class="form-group">
+						<button class="form-control btn btn-primary" ng-click="addToCart(order.description)">Lägg till beställning</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-md-pull-6">
+				<div class="item-images">
+					<img ng-src="assets/img/{{model.image}}" />
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+<!--<section class="comments secondary">
+	<div class="container">
+		<h2>Kommentarer</h2>
+		<div class="comment">
+			<div class="row">
+				<div class="col-xs-4">
+				</div>
+				<div class="col-xs-8">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsa, optio, sequi provident suscipit quod ducimus tenetur amet laboriosam molestias voluptatum fugiat harum asperiores. Voluptates, alias, quis, enim, temporibus laudantium consequatur asperiores reprehenderit officiis sapiente facere nihil aut doloremque quas debitis aspernatur deserunt adipisci! Non tempore placeat accusamus aperiam quibusdam.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="comment">
+			<div class="row">
+				<div class="col-xs-4">
+				
+				</div>
+				<div class="col-xs-8">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsa, optio, sequi provident suscipit quod ducimus tenetur amet laboriosam molestias voluptatum fugiat harum asperiores. Voluptates, alias, quis, enim, temporibus laudantium consequatur asperiores reprehenderit officiis sapiente facere nihil aut doloremque quas debitis aspernatur deserunt adipisci! Non tempore placeat accusamus aperiam quibusdam.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->

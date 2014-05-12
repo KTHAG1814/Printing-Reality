@@ -1,0 +1,34 @@
+<section>
+<ol class="breadcrumb">
+	<li><a ng-href="#/archive">Arkiv</a></li>
+	<li>{{breadcrumb.category}}</li>
+</ol>
+</section>
+<section id="archive-grid" class="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-3 item" ng-repeat="model in models">
+				<div class="item-header">
+					<div class="square-panel">
+						<div class="square-content">
+							<div>
+								<span><img ng-src="assets/img/{{model.image}}" /></span>
+							</div>
+						</div>
+					</div>
+					
+					<a ng-href="#/archive/{{model.category}}/{{model.id}}"><h3 class="item-title">{{model.name}}</h3></a>
+				</div>
+				<div class="item-meta">
+					<dl class="compact tree">
+						<dt>Kategori</dt>
+						<dd>{{model.category}}</dd>
+					</dl>
+				</div>
+				<div class="item-content">
+					<p>{{model.shortdescription}}</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
