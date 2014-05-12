@@ -40,6 +40,7 @@ function($routeProvider) {
 	}).
 	when('/study', {
 		templateUrl: 'assets/views/study.html',
+		controller: 'StudyCtrl',
 	}).
 	otherwise({
 		redirectTo: '/',
@@ -52,7 +53,6 @@ var MainControllers = angular.module('MainControllers', []);
 MainControllers.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 	$scope.template = {};
 	$scope.template.footer = 'assets/partials/footer.html';
-	$scope.template.context = 'start';
 	$scope.cart = [];
 }]);
 
@@ -67,6 +67,11 @@ MainControllers.controller('DemoCtrl', ['$scope', '$http', function ($scope, $ht
 }]);
 
 MainControllers.controller('AboutCtrl', ['$scope', '$http', function ($scope, $http) {
+	$scope.template.context = 'page';
+	$scope.template.header = 'assets/partials/headernav.html';
+}]);
+
+MainControllers.controller('StudyCtrl', ['$scope', '$http', function ($scope, $http) {
 	$scope.template.context = 'page';
 	$scope.template.header = 'assets/partials/headernav.html';
 }]);
